@@ -1,0 +1,9 @@
+@import "./style/tailwind.config.css";
+
+/* Material Icons styling */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+.material-symbols-outlined{
+  @apply text-3xl sm:text-base;
+}
