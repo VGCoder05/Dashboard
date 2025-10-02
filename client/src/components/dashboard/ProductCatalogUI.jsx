@@ -2,46 +2,7 @@
 import React from 'react';
 import NavbarLogic from '../layout/Navbar/NavbarLogic';
 
-// --- Icons (can be moved to their own files) ---
-const InfoIcon = () => (
-    <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"></path>
-    </svg>
-);
-
 // --- Sub-Components for better organization ---
-
-// const Header = ({ user, searchTerm, onSearchChange }) => (
-//   <header className="flex items-center justify-between whitespace-nowrap border-b border-primary/20 dark:border-primary/30 px-6 py-3">
-//     <div className="flex items-center gap-8">
-//       <div className="flex items-center gap-2.5 text-slate-800 dark:text-white">
-//         <div className="size-6 text-primary"><InfoIcon /></div>
-//         <h2 className="text-lg font-bold text-slate-800 dark:text-white tracking-[-0.015em]">Catalog Manager</h2>
-//       </div>
-//       <nav className="hidden md:flex items-center gap-6">
-//         <a className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="#">Dashboard</a>
-//         <a className="text-sm font-medium text-primary dark:text-primary" href="#">Products</a>
-//         <a className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="#">Orders</a>
-//         <a className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="#">Customers</a>
-//       </nav>
-//     </div>
-//     <div className="flex items-center gap-4">
-//       <div className="relative w-64">
-//         <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 dark:text-slate-400">search</span>
-//         <input 
-//             className="form-input w-full rounded-lg border-primary/20 dark:border-primary/30 bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 placeholder:text-slate-500 dark:placeholder:text-slate-400 pl-10 pr-4 py-2 text-sm focus:ring-primary focus:border-primary" 
-//             placeholder="Search" 
-//             value={searchTerm}
-//             onChange={onSearchChange}
-//         />
-//       </div>
-//       <button className="flex items-center justify-center rounded-full h-10 w-10 bg-primary/10 dark:bg-primary/20 text-slate-700 dark:text-slate-200 hover:bg-primary/20 dark:hover:bg-primary/30">
-//         <span className="material-symbols-outlined text-xl">notifications</span>
-//       </button>
-//       <div className="size-10 rounded-full bg-cover bg-center" style={{ backgroundImage: `url("${user.avatarUrl}")` }}></div>
-//     </div>
-//   </header>
-// );
 
 const FilterButton = ({ children }) => (
     <button className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/10 dark:bg-primary/20 pl-4 pr-2 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-primary/20 dark:hover:bg-primary/30">
