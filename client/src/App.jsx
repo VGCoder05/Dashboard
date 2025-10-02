@@ -1,11 +1,15 @@
 import React from "react";
-import ProductCatalogPage from "./components/dashboard/ProductCatalogPage";
 import MainRoutes from "./mainroutes/MainRoutes";
+import NavbarLogic from './components/layout/Navbar/NavbarLogic';
 
-// <ProductCatalogPage />
 
 const App = () => {
-  return <MainRoutes/>;
+  return (
+    <>
+    <NavbarLogic/>
+    <MainRoutes/>
+    </>
+  );
 };
 
 export default App;

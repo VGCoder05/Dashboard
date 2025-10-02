@@ -57,7 +57,8 @@ function NavbarLogic() {
 
   const navLinks = [
     { name: "Dashboard", href: "" },
-    { name: "Product", href: "product" },
+    { name: "product1", href: "product1" },
+    { name: "product2", href: "product2" },
   ];
 
   return (
