@@ -18,14 +18,6 @@ function NavbarUI({
   onCloseMenu,      // (handler) A function to explicitly close the menu, typically used by child components.
 }) {
 
-  const fallbackLinks = [
-    { name: "Test1", href: "/test1" },
-    { name: "Test2", href: "/test2" }
-  ];
-
-
-
-
   return (
     <>
       <header className="px-4 md:px-6 lg:px-10 h-16 sticky top-0 z-10 flex items-center gap-2 sm:gap-7 md:gap-10 border-b border-border-light dark:border-border-dark bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm px-4 md:px-6 lg:px-10">
