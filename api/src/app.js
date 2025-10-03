@@ -2,6 +2,7 @@ const express = require("express");
 const cookieParser = require('cookie-parser');
 const connectDB = require("./db/db")
 const cors = require("cors");
+const serverless = require("serverless-http");
 
 // --- Routes ---
 const authRoutes = require("./routes/auth.routes")
@@ -27,4 +28,4 @@ app.use("/auth", authRoutes);
 // --- ERROR HANDLER MIDDLEWARE ---
 app.use(errorHandler);
 
-module.exports = app;
+module.exports = serverless(app);
