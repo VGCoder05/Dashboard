@@ -1,20 +1,24 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import api from "../util/api"
- import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from "../context/AuthContext";
 
 const Register = () => {
   const {
-    register,
+     register: formRegister,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
   const navigate = useNavigate();    
+    const { register } = useAuth(); 
+
   const onSubmit = async (data) => {
     
     try {
-     const res = await api.post("/auth/register", data);
+    //  const res = await api.post("/auth/register", data);
+     await register(data);
      alert("Register successful");
     //  localStorage.setItem("token", res.data.token);
      navigate("/");
@@ -52,7 +56,7 @@ const Register = () => {
               id="email"
               type="email"
               placeholder="email@example.com"
-              {...register("email", { required: "Email is required" })}
+              {...formRegister("email", { required: "Email is required" })}
               className="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             {errors.email && (
@@ -74,7 +78,7 @@ const Register = () => {
               id="password"
               type="password"
               placeholder="********"
-              {...register("password", { required: "Password is required" })}
+              {...formRegister("password", { required: "Password is required" })}
               className="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             {errors.password && (

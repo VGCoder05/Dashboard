@@ -1,7 +1,8 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import api from "../util/api"
- import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
   const {
@@ -11,9 +12,12 @@ const Login = () => {
   } = useForm();
   
   const navigate = useNavigate();
+  const { login } = useAuth(); 
+
   const onSubmit = async (data) => {
         try {
-          const res = await api.post("/auth/login", data);
+          // const res = await api.post("/auth/login", data);
+             await login(data);
           alert("Login successful");
           
           // localStorage.setItem("token", res.data.token);
@@ -34,7 +38,7 @@ const Login = () => {
   };
 
   return (
-    <div className=" flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-50 to-blue-100">
+    <div className="absolute inset-0 z-10 flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-50 to-blue-100">
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
         <h2 className="text-2xl font-bold text-center text-primary mb-6">
           Welcome Back
