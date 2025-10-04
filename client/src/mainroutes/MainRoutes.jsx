@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import DashboardPages from "../pages/DashboardPages";
-// import ProtectedRoute from "../components/common/ProtectedRoute/ProtectedRoute";
+import ProtectedRoute from "../components/common/ProtectedRoute/ProtectedRoute";
 import Login from "../pages/LoginPage";
 import Register from "../pages/RegisterPage";
 
@@ -10,17 +10,17 @@ const MainRoutes = () => {
       <Route
         path="/"
         element={
-          // <ProtectedRoute>
+          <ProtectedRoute>
             <DashboardPages />
-          // </ProtectedRoute> 
+          </ProtectedRoute> 
         }
       />
       <Route
         path="/product"
         element={
-          // <ProtectedRoute>
+          <ProtectedRoute>
             <DashboardPages />
-          // </ProtectedRoute> 
+          </ProtectedRoute> 
         }
       />
       <Route path="/login" element={<Login />} />
